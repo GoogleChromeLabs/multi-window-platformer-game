@@ -1,0 +1,71 @@
+<!--
+ Copyright 2023 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<html>
+    <head>
+        <title></title>
+        <style>
+            body {
+                margin: 0;
+            }
+            .toast {
+                font-family: "Arial";
+                position: fixed;
+                bottom: 1em;
+                left: 1em;
+                right: 1em;
+                border-radius: 3px;
+                padding: 0.5em;
+                display: flex;
+                flex-direction: column;
+                backdrop-filter: blur(8px);
+                border-radius: 3px;
+                background: #f5f5f55b;
+                align-items: center;
+                border: 0.5px solid #0000002b;
+                opacity: 0;
+            }
+            .toast h5 {
+                margin: 0;
+                font-weight: bold;
+            }
+            .toast p{
+                margin: 0;
+                font-size: 10px;
+                color: #515151;
+            }
+            .fade-in-out {
+                opacity: 0;
+                animation: fade 6s ease-in-out;
+            }
+
+
+            @keyframes fade {
+                0% { opacity: 0 }
+                5% { opacity: 1 }
+            100% { opacity: 0 }
+            50% { opacity: 1 }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="toast fade-in-out" id="toast">
+            <h5>Level 1</h5>
+            <p>Some hint here.</p>
+        </div>
+    </body>
+</html>

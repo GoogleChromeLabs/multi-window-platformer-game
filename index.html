@@ -1,0 +1,110 @@
+<!doctype html>
+
+<!--
+ Copyright 2023 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+
+<meta charset="utf-8">
+<title>Multi-Window Platform Game</title>
+<link rel=stylesheet href="styles.css">
+<link rel="shortcut icon" href="assets/square-16.ico">
+    <body>
+
+        <h2>Gameplay</h2>
+
+        <p>Goal: Move 🟥 to 🏁 through levels. Look for hints at the bottom of each level's window.</p>
+
+        <div id=progress>
+          Loading <progress value=0 min=0 max=100>0%</progress>
+        </div>
+        <div id=startcontrols>
+        <select id="levelSelector" value="0">
+        </select>
+        <button id="start">Start</button>
+        </div>
+
+        <h2>Options</h2>
+
+        <input class="SoundCheckbox" id="SoundCheckbox" type="checkbox" name="Sound" checked />
+        <label for="SoundCheckbox" id="SoundLabel">Sound</label>
+        <p></p>
+        <input class="MultiscreenCheckbox" id="MultiscreenCheckbox" type="checkbox" name="Multiscreen" />
+        <label for="MultiscreenCheckbox" id="MultiscreenLabel">Multiscreen</label>
+        <p></p>
+
+        <h2>Controls</h2>
+
+        <table id=controls>
+          <tr>
+            <th>Keyboard</th>
+            <th>Gamepad</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td><kbd>&larr;</kbd> <kbd>&rarr;</kbd></td>
+            <td><span class=gp>&#x21A2;</span> or <span class=gp>&#x21C4;</span></td>
+            <td> Move left/right</td>
+          </tr>
+          <tr>
+            <td><kbd>Space</kbd></td>
+            <td><span class=gp>&#x21D3;</td>
+            <td> Jump</td>
+          </tr>
+          <tr>
+            <td><kbd>R</kbd></td>
+            <td><span class=gp>&#x2199;</span></td>
+            <td> Roar</td>
+          </tr>
+          <tr>
+            <td><kbd>T</kbd></td>
+            <td><span class=gp>&#x2198;</span></td>
+            <td> Teleport</td>
+          </tr>
+          <tr>
+            <td><kbd>E</kbd></td>
+            <td><span class=gp>&#x21D1;</td>
+            <td> Rotate window positions</td>
+          </tr>
+          <tr>
+            <td><kbd>[</kbd> <kbd>]</kbd> *</td>
+            <td><span class=gp>&#x21D0;</span> / <span class=gp>&#x21D2;</span></td>
+            <td> Focus prev/next window</td>
+          </tr>
+          <tr>
+            <td><kbd>W</kbd> <br><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td>
+            <td><span class=gp>&#x21F2;</span></td>
+            <td> Move focused window</td>
+          </tr>
+          <tr>
+            <td><kbd>Esc</kbd></td>
+            <td><span class=gp>&#x21F9;</td>
+            <td> Exit level </td>
+          </tr>
+        </table>
+        <p>* May not work; known issue. Workaround is to use the mouse.</p>
+        <dialog id=popups-blocked>
+          <h2>Popups blocked!</h2>
+          <p>Please allow popups and try again. Look for an
+            icon in the top right of the URL bar and
+            click it to show a prompt like this one, then
+            click 'Allow...' and then click 'Done'.</p>
+          <div class=images><img src="assets/popups-blocked.png"></div>
+          <div class=buttons><button>OK</button></div>
+        </dialog>
+
+        <div id="log"></div>
+    </body>
+    <script src="game.js" type="module"></script>
+    <script src="page.js" type="module"></script>
