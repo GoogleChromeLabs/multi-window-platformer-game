@@ -1,3 +1,7 @@
+### Disclaimer
+
+This is not an officially supported Google product.
+
 # Multi-window Platformer Game
 
 This repository hosts a simple Platformer game that makes use of multiple windows and screens.
