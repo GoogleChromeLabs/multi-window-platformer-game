@@ -4,8 +4,9 @@ This is not an officially supported Google product.
 
 # Multi-window Platformer Game
 
-This repository hosts a simple Platformer game that makes use of multiple windows and screens.
-It is intended as an API showcase to inspire and increase multi-screen awareness on the Web through a unique game experience. It exercises a variety of Web APIs, including:
+This repository hosts a simple platformer game that makes use of multiple windows and screens.
+It is intended as an API showcase to inspire and increase multi-screen awareness on the Web through a unique game experience.
+It exercises a variety of Web APIs, including:
 
 - [Window Management API](https://w3c.github.io/window-management/): getScreenDetails(), cross-screen window placement.
 - [Popup Window APIs](https://developer.mozilla.org/en-US/docs/Web/API/Window): open(), moveTo(), moveBy(), resizeTo(), focus(), close().
@@ -15,7 +16,7 @@ It is intended as an API showcase to inspire and increase multi-screen awareness
 
 ## Instructions on how to run / play it
 
-Host this game locally and run it. e.g.:
+Play [here](https://googlechromelabs.github.io/multi-window-platformer-game/) or host your own local clone:
 
 ```console
 $ git clone https://github.com/googlechromelabs/multi-window-platformer-game.git
